@@ -57,5 +57,19 @@ He explian the ARS in his video I just added the comment in the [code](https://g
 Detial for the ColinSkow ARS algorithm explaination is in [Move37](https://www.theschool.ai/courses/move-37-course/lessons/augmented-random-search-tutorial-teach-a-robot-to-walk/) course by [SirajRaval](https://github.com/llSourcell)
 
 
+## Evolution Strategies
+[ES](https://arxiv.org/abs/1703.03864) is somewhat unfortunately named, as I view it has more of a variation of Random Search than in any way being related to the principles of evolution. Before describing ES, I think it’s helpful to understand Random Search. Consider the problem of finding wights for a neural network in a Reinforcement Learning task, where the network is given a score based on how well it performs in a particular environment. Random Search samples points (potential weights) in a hyper-sphere around the origin. The ‘best’ point is selected and then a hyper-sphere around that best point is sampled. The next best point is found and the cycle repeats until some stopping criteria. ES is similar to Random Search but instead of the new ‘best’ point being decided by the single best performing point, the new ‘best’ is calculated using the average of the difference between the previous ‘best’ and the sampled points, weighted by their ‘fitness’ (the value returned from the environment). Pseudo code is below. In this way, the new ‘best’ will move in the direction that maximizes performance in the environment. This can be considered as a type of gradient descent based on finite differences, even though no gradient is being calculated.
+
+For further reading regarding ES read [https://blog.openai.com/evolution-strategies/](https://blog.openai.com/evolution-strategies/)
+
+Im trying to implement using the [alirezamikas](https://github.com/alirezamika/bipedal-es) [evostra](https://github.com/alirezamika/evostra) but don't know the reward was not increasing. I train the agent over 1000 iterations
+
+![ALT test](https://github.com/Tirth27/BipedalWalker_ARS_ES/blob/master/ES_Inherrited/images/Screenshot%20from%202018-10-27%2020-33-50.png)
+
+For the sake of simplicity I first implement ES on CartPole environment in [Es_CartPole.py](https://github.com/Tirth27/BipedalWalker_ARS_ES/blob/master/Evolution%20Strategies/Es_CartPole.py) then transfer that concept into BipedalWalker environment in [Es_BipedalWalker.py](https://github.com/Tirth27/BipedalWalker_ARS_ES/blob/master/Evolution%20Strategies/Es_BipedalWalker.py) but it don't work well.
+I found the ES implementation in python by hardmaru in his [repo](https://github.com/hardmaru/estool) It is easy to use tool to implement various ES strategies
+
+Then I used the ARS to train the BipedalWalker 
+![ALT test](https://raw.githubusercontent.com/Tirth27/BipedalWalker_ARS_ES/master/Augmented%20Random%20Search/videos/BipedalWalker-v2/openaigym.video.0.6124.video023132.mp4)
 
 
