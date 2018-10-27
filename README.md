@@ -69,7 +69,30 @@ Im trying to implement using the [alirezamikas](https://github.com/alirezamika/b
 For the sake of simplicity I first implement ES on CartPole environment in [Es_CartPole.py](https://github.com/Tirth27/BipedalWalker_ARS_ES/blob/master/Evolution%20Strategies/Es_CartPole.py) then transfer that concept into BipedalWalker environment in [Es_BipedalWalker.py](https://github.com/Tirth27/BipedalWalker_ARS_ES/blob/master/Evolution%20Strategies/Es_BipedalWalker.py) but it don't work well.
 I found the ES implementation in python by hardmaru in his [repo](https://github.com/hardmaru/estool) It is easy to use tool to implement various ES strategies
 
-Then I used the ARS to train the BipedalWalker 
-![ALT test](https://raw.githubusercontent.com/Tirth27/BipedalWalker_ARS_ES/master/Augmented%20Random%20Search/videos/BipedalWalker-v2/openaigym.video.0.6124.video023132.mp4)
+Then I used the ARS to train the BipedalWalker in [Ars_BipedalWalker.py](https://github.com/Tirth27/BipedalWalker_ARS_ES/blob/master/Augmented%20Random%20Search/Ars_BipedalWalker.py)
+![](https://github.com/Tirth27/BipedalWalker_ARS_ES/blob/master/Augmented%20Random%20Search/videos/ezgif.com-video-to-gif.gif)
 
 
+## References
+
+[Bipedal Walker by Allan Reyes](https://github.com/allanbreyes/bipedal-walker/blob/master/writeup.md)
+
+[Evolution Strategies by Fabrizio Frigeni](https://medium.com/swlh/evolution-strategies-844e2694e632)
+
+[Evolution Strategies as a Scalable Alternative to Reinforcement Learning — Paper Summary](https://medium.com/@benjamin.phillips22/evolution-strategies-as-a-scalable-alternative-to-reinforcement-learning-paper-summary-691161b52ddd)
+
+[Augmented-Random-Search](https://github.com/jainpankul/Augmented-Random-Search)
+
+[Evolution Strategies with Keras](https://gist.github.com/nicksam112/00e9638c0efad1adac878522cf172484)
+
+[ESTool by hardmaru](https://github.com/hardmaru/estool)
+
+[A Visual Guide to Evolution Strategies](http://blog.otoro.net/2017/10/29/visual-evolution-strategies/)
+
+[Evostra: Evolution Strategy for Python](https://github.com/alirezamika/evostra)
+
+[An AI agent learning to walk in gym's BipedalWalker environment.](https://github.com/alirezamika/bipedal-es)
+
+[Move37 Course by SirajRaval](https://www.theschool.ai/courses/move-37-course/)
+
+[Augmented Random Search Tutorial (Teach a Robot to Walk)](https://www.theschool.ai/courses/move-37-course/lessons/augmented-random-search-tutorial-teach-a-robot-to-walk/)
